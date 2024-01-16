@@ -213,8 +213,8 @@ export default class App {
 		requestAnimationFrame(() => this.render());
 		this.time += 0.05;
 		this.material.uniforms.uTime.value = this.time;
-		this.mouse.targetX = gsap.utils.interpolate(this.mouse.targetX, this.mouse.x, 0.1);
-		this.mouse.targetY = gsap.utils.interpolate(this.mouse.targetY, this.mouse.y, 0.1);
+		this.mouse.targetX = gsap.utils.interpolate(this.mouse.targetX, this.mouse.x, 0.16);
+		this.mouse.targetY = gsap.utils.interpolate(this.mouse.targetY, this.mouse.y, 0.16);
 		this.material.uniforms.uMouse.value.x = this.mouse.targetX;
 		this.material.uniforms.uMouse.value.y = this.mouse.targetY;
 		this.renderer.render(this.scene, this.camera);

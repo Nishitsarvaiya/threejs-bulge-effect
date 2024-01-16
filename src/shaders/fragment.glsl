@@ -17,7 +17,7 @@ vec2 bulge(vec2 uv, vec2 center) {
   uv -= center; // center to mouse
 
   float dist = length(uv) / uRadius; // amount of distortion based on mouse pos
-  float distPow = pow(dist, 4.); // exponential as you ar far from the mouse
+  float distPow = pow(dist, 5.); // exponential as you ar far from the mouse
   float strengthAmount = uStrength / (1.0 + distPow); // strenght
 
   uv *= (1. - uBulge) + uBulge * strengthAmount; // use uBulge to smoothly reset/add effect
